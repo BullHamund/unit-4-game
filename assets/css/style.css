@@ -1,0 +1,40 @@
+.container-fluid {
+    background-color: aquamarine;
+
+}
+
+.jumbotron {
+    background-color: azure;
+    padding: 20px;
+   border-top: 20px;
+
+}
+
+.instructions {
+    background-color: azure;
+    padding: 20px;
+    margin: 10px
+}
+
+.magicNumber {
+    padding: 20px;
+    background-color: azure;
+    margin: 10px;
+}
+
+.winsLosses {
+    padding: 20px;
+    background-color: azure;
+    margin: 10px;
+}
+
+.score {
+    background-color: azure;
+    padding: 20px;
+    margin-bottom: 20px
+}
+.footer{
+    background-color: #00695c;
+    text-align: center;
+
+}

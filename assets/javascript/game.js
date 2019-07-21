@@ -17,28 +17,25 @@ var magicNumber = Math.floor(Math.random() * ((120 - 19) + 1) + 19);
 $(document).ready(function () {
 
     console.log(magicNumber);
-    $("#magicNumber").html(magicNumber);
-
-
-
-    $("#currScore").html(total);
+    updateHtml();
+    //$("#magicNumber").html(magicNumber);
+    updateHtml();
+   // $("#currScore").html(total);
 
     for (var i = 0; i < 4; i++) {
         var randNum = Math.floor(Math.random() * 12) + 1;
         console.log(randNum);
         var crystal = $("#crystal" + (i + 1));
-        crystal.attr("data-value", randNum); 
+        crystal.attr("data-value", randNum);
     }
     $("button").on("click", function () {
         //alert($(this).data("value"));
         //console.log($(this));
         total += $(this).data("value");
-        $("#currScore").html(total);
+        updateHtml();
+        //$("#currScore").html(total);
         checkScore();
-
     })
-
-
 
 });
 
@@ -56,13 +53,33 @@ function checkScore() {
     console.log(total, magicNumber);
     if (total === magicNumber) {
         win++;
-        $("#win").html("Wins: " + win);
+        updateHtml();
+        //$("#win").html("Wins: " + win);
         console.log(win);
-        randomize();
+        //randomize();
+        resetGame();
     } else if (total > magicNumber) {
         loss++;
-        $("#loss").html("Losses: " + loss);
+        updateHtml();
+        //$("#loss").html("Losses: " + loss);
         console.log(loss);
-        randomize();
+        //randomize();
+        resetGame();
+
     }
+}
+
+function updateHtml() {
+    $("#magicNumber").html(magicNumber);
+    $("#currScore").html(total);
+    $("#win").html("Wins: " + win);
+    $("#loss").html("Losses: " + loss);
+
+}
+
+function resetGame() {
+    total = 0;
+    randomize();
+    updateHtml();
+    
 }

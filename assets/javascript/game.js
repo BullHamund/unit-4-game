@@ -12,6 +12,7 @@ var loss = 0;
 var win = 0;
 var total = 0;
 var magicNumber = Math.floor(Math.random() * ((120 - 19) + 1) + 19);
+//var crystal = 
 
 
 $(document).ready(function () {
@@ -24,14 +25,15 @@ $(document).ready(function () {
 
     for (var i = 0; i < 4; i++) {
         var randNum = Math.floor(Math.random() * 12) + 1;
-        console.log(randNum);
+        
         var crystal = $("#crystal" + (i + 1));
         crystal.attr("data-value", randNum);
     }
     $("button").on("click", function () {
         //alert($(this).data("value"));
         //console.log($(this));
-        total += $(this).data("value");
+        //total += $(this).data("value");
+        total += parseInt($(this).attr("data-value"));
         updateHtml();
         //$("#currScore").html(total);
         checkScore();

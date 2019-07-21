@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
-    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
     <title>unit-4-game-Crystals</title>
 </head>
 
@@ -30,9 +28,9 @@
         <div class="container">
 
             <div class="row">
-                    <div class="col-sm-3">
-                    
-                        </div>
+                <div class="col-sm-3">
+
+                </div>
 
                 <div class="col-sm-6 instructions">
                     <P>You will be given a random number at the start of the game.</P>
@@ -48,65 +46,74 @@
                     <p> Each time when the game starts, the game will change the values of each crystal</p>
                 </div>
                 <div class="col-sm-3">
-                    
+
                 </div>
 
             </div>
             <div class="container">
                 <div class="row">
-                        <div class="col-sm-3">
+                    <div class="col-sm-3">
 
-                            </div>
-                    <div class="col-sm-3 magicNumber">
-                        <h3>Magic Number: </h3>
                     </div>
-                    <div class="col-sm-3 winsLosses">
-                        <p>WINS: </p>
-                        <P>LOSSES: </P>
+                    <div class="col-sm-3">
+                        <h3>Magic Number: <span id="magicNumber"></span></h3>
+                    </div>
+                    <div class="col-sm-3">
+                        <p id="win">WINS: </p>
+                        <P id="loss">LOSSES: </P>
                     </div>
                     <div class="col-sm-3">
 
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row crystals">
                 <div class="col-sm-3">
-                    <button><img src="assets/images/moonstone.jpeg" id="moonstone" alt="an image of a moonstone"
+                    <button id="crystal1"><img src="assets/images/moonstone.jpeg"  alt="an image of a moonstone"
                             class="img"></button>
                 </div>
                 <div class="col-sm-3">
-                    <button><img src="assets/images/amethyst.jpg" id="amethyst" alt="an image of an amethyst"
+                    <button id="crystal2"><img src="assets/images/amethyst.jpg"  alt="an image of an amethyst"
                             class="img"></button>
                 </div>
                 <div class="col-sm-3">
-                    <button><img src="assets/images/citrine.jpeg" id="citrine" alt="an image of a citrine"
+                    <button id="crystal3"><img src="assets/images/citrine.jpeg"  alt="an image of a citrine"
                             class="img"></button>
                 </div>
                 <div class="col-sm-3">
-                    <button><img src="assets/images/garnet.png" id="garnet" alt="an image of a garnet"
+                    <button id="crystal4"><img src="assets/images/garnet.png"  alt="an image of a garnet"
                             class="img"></button>
 
                 </div>
             </div>
-            <div class ="row score">
+            <div class="row score">
                 <div class="col-sm-4">
-                    </div>
-                <div class="col-sm-4 currScore">
-                <h3>Your score so far: </h3>
                 </div>
                 <div class="col-sm-4">
-                    </div>
+                    <h3>Your score so far: <span id="currScore"></span></h3>
+                </div>
+                <div class="col-sm-4">
+                </div>
             </div>
 
         </div>
-        
+
         <footer></footer>
-        
+
     </div>
-    <footer class="footer">&copy; 2018 Holger Mueller</footer>
+    <footer class="footer">&copy; 2019 Bill Hammond</footer>
 
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
-
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="assets/javascript/game.js"></script>
 </body>
 
 
